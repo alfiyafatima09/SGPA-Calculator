@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA_Calculator</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="calculator">
+            <h1><br>Know Your SGPA!</h1>
+            <div class="input-box1">
+                <input type = "number" maxlength="3" min="1" class="input-box2" id="sub1" placeholder="4 credit subject 1"></input-type>
+                <input type = "number" class="input-box2" id="sub2" placeholder="4 credit subject 2"></input-type>
+                <input type = "number" class="input-box2" id="sub3" placeholder="3 credit subject 3"></input-type>
+                <input type = "number" class="input-box2" id="sub4" placeholder="3 credit subject 4"></input-type>
+                <input type = "number" class="input-box2" id="sub5" placeholder="3 credit subject 5"></input-type>
+                <input type = "number" class="input-box2" id="sub6" placeholder="1 credit subject 6"></input-type>
+                <input type = "number" class="input-box2" id="sub7" placeholder="1 credit subject 7"></input-type>
+                <input type = "number" class="input-box2" id="sub8" placeholder="1 credit subject 8"></input-type>
+
+                <div class="ib2">
+                    <button onclick="calculateSGPA()">Calculate</button>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="ib2"> 
+                    <p id="result" readonly>
+                </div>
+                
+                
+            </div>
+      </div>
+    </div> 
+      <!-- JavaScript code for the above code to calculate sgpa and display it as per the given data  -->
+        <script>
+          function points(a){
+            if(a > 89) return 10;
+            else if(a > 79) return 9;
+            else if(a > 69) return 8;
+            else if(a > 59) return 7;
+            else if(a > 49) return 6;
+            else if(a > 44) return 5;
+            else if(a > 39) return 4;
+            return 0;
+            // else if(a > 29) return 4;
+            // else if(a > 19) return 3;
+            // else if(a > 9) return 2;
+            // else return 1;
+          }
+      function calculateSGPA() {
+          var sub1Marks = points(document.getElementById("sub1").value);
+          var sub2Marks = points(document.getElementById("sub2").value);
+          var sub3Marks = points(document.getElementById("sub3").value);
+          var sub4Marks = points(document.getElementById("sub4").value);
+          var sub5Marks = points(document.getElementById("sub5").value);
+          var sub6Marks = points(document.getElementById("sub6").value);
+          var sub7Marks = points(document.getElementById("sub7").value);
+            var sub8Marks = points(document.getElementById("sub8").value);
+             
+
+      
+          // Extracting credit hours from placeholders
+          var sub1Credits = 4;
+          var sub2Credits = 4;
+            var sub3Credits = 3;
+            var sub4Credits = 3;
+            var sub5Credits = 3;
+            var sub6Credits = 1;
+            var sub7Credits = 1;
+            var sub8Credits = 1;
+
+          // Calculating total grade points and total credit hours
+          var totalGradePoints = (sub1Marks * sub1Credits) + (sub2Marks * sub2Credits) + (sub3Marks * sub3Credits) +
+                                (sub4Marks * sub4Credits) + (sub5Marks * sub5Credits) + (sub6Marks * sub6Credits) +
+                                (sub7Marks * sub7Credits)+ (sub8Marks * sub8Credits);
+          var totalCreditHours = sub1Credits + sub2Credits + sub3Credits + sub4Credits + sub5Credits + sub6Credits + sub7Credits+ sub8Credits;
+      
+          // Calculating SGPA
+          var sgpa =( totalGradePoints / totalCreditHours );
+      
+          // Display the calculated SGPA
+          let result = document.getElementById("result");
+            result.innerHTML = `Your SGPA is: ${sgpa.toFixed(2)}`;
+
+      }
+        </script>
+    
+</body>
+</html>
