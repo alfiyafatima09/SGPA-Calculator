@@ -1,6 +1,6 @@
-# VTU SGPA Calculator
+# SGPA Calculator
 
-VTU SGPA Calculator is a web-based tool designed for students following the VTU (Visvesvaraya Technological University) credit-based system. With a sleek interface built using HTML, CSS, and JavaScript, this calculator simplifies SGPA computation. Input grades for 8 subjects, get instant SGPA. Effortlessly track VTU academic performance. Contribute and customize. Happy calculating! 🎓✨
+SGPA Calculator is a web-based tool designed for students following the VTU (Visvesvaraya Technological University) credit-based system. With a sleek interface built using HTML, CSS, and JavaScript, this calculator simplifies SGPA computation. Input grades for 8 subjects, get instant SGPA. Effortlessly track VTU academic performance. Contribute and customize. Happy calculating! 🎓✨
 
 ## How to Use
 
